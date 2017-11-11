@@ -1,10 +1,9 @@
+dist: precise
 language: java
 sudo: false # faster builds
 
 jdk:
-  - oraclejdk8
-
-script: "mvn clean package cobertura:cobertura"
+  - oraclejdk7
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

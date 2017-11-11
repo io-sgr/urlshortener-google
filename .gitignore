@@ -1,12 +1,24 @@
-.DS_Store
+# Eclipse
+.classpath
+.project
+.settings/
 
-# Eclipse stuff
-/.settings
-/bin
-/target
-/.classpath
-/.project
-
-# User-specific stuff:
+# Intellij
 .idea/
 *.iml
+*.iws
+*.ipr
+
+# Mac
+.DS_Store
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Gralde
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+logs/
