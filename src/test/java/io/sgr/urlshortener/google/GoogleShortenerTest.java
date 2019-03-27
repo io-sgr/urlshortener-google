@@ -36,7 +36,7 @@ public class GoogleShortenerTest {
 			return;
 		}
 		GoogleURLShortener shortener = new GoogleURLShortener();
-		String longUrl = "https://github.com/sgr-io/urlshortener-google";
+		String longUrl = "https://github.com/io-sgr/urlshortener-google";
 		try {
 			String shortUrl = shortener.shortenURL(origin, apiKey, longUrl);
 			Assert.assertEquals("https://goo.gl/Fv5gix", shortUrl);
