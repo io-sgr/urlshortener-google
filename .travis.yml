@@ -8,11 +8,7 @@ cache:
   directories:
     - $HOME/.m2
 
-install:
-  - ./mvnw dependency:purge-local-repository
-
-script: 
-  - ./mvnw clean install
+script: "./mvnw clean install"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
