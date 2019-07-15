@@ -24,11 +24,10 @@ import retrofit2.http.Query;
 
 /**
  * @author SgrAlpha
- *
  */
 public interface GoogleUrlShortenerApi {
 
-	@POST("/urlshortener/v1/url")
-	Call<URLShortenerResponse> url(@Header("Origin") String origin, @Query("key") String apiToken, @Body ShortenUrlPayload payload);
+    @POST("/urlshortener/v1/url")
+    Call<URLShortenerResponse> url(@Header("Origin") String origin, @Query("key") String apiToken, @Body ShortenUrlPayload payload);
 
 }

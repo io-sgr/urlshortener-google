@@ -17,17 +17,17 @@
   -->
 
 <Configuration status="warn">
-	<Properties>
-		<Property name="layout">%d{yyyy-MM-dd HH:mm:ss} [%-5level] %logger{36} - %m%n</Property>
-	</Properties>
-	<Appenders>
-		<Console name="CONSOLE_LOG" target="SYSTEM_OUT">
-			<PatternLayout pattern="${layout}" />
-		</Console>
-	</Appenders>
-	<Loggers>
-		<Root level="debug">
-			<AppenderRef ref="CONSOLE_LOG" />
-		</Root>
-	</Loggers>
+    <Properties>
+        <Property name="layout">%d{yyyy-MM-dd HH:mm:ss} [%-5level] %logger{36} - %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="CONSOLE_LOG" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout}"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="CONSOLE_LOG"/>
+        </Root>
+    </Loggers>
 </Configuration>

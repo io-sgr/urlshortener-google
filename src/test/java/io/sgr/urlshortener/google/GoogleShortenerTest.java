@@ -21,28 +21,27 @@ import org.junit.Test;
 
 /**
  * @author SgrAlpha
- *
  */
 public class GoogleShortenerTest {
-	
-	@Test
-	public void test() {
-		String apiKey = System.getenv("GOOGLE_API_KEY");
-		if (apiKey == null) {
-			return;
-		}
-		String origin = System.getenv("ORIGIN");
-		if (origin == null) {
-			return;
-		}
-		GoogleURLShortener shortener = new GoogleURLShortener();
-		String longUrl = "https://github.com/io-sgr/urlshortener-google";
-		try {
-			String shortUrl = shortener.shortenURL(origin, apiKey, longUrl);
-			Assert.assertEquals("https://goo.gl/Fv5gix", shortUrl);
-		} catch (Exception e) {
-			Assert.fail(e.getMessage());
-		}
-	}
+
+    @Test
+    public void test() {
+        String apiKey = System.getenv("GOOGLE_API_KEY");
+        if (apiKey == null) {
+            return;
+        }
+        String origin = System.getenv("ORIGIN");
+        if (origin == null) {
+            return;
+        }
+        GoogleURLShortener shortener = new GoogleURLShortener();
+        String longUrl = "https://github.com/io-sgr/urlshortener-google";
+        try {
+            String shortUrl = shortener.shortenURL(origin, apiKey, longUrl);
+            Assert.assertEquals("https://goo.gl/Fv5gix", shortUrl);
+        } catch (Exception e) {
+            Assert.fail(e.getMessage());
+        }
+    }
 
 }

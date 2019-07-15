@@ -22,52 +22,51 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author SgrAlpha
- *
  */
-@JsonIgnoreProperties(ignoreUnknown=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class URLShortenerResponse {
 
-	private final String kind;
-	private final String id;
-	private final String longUrl;
-	
-	/**
-	 * @param kind
-	 * 				The type of response
-	 * @param id
-	 * 				The short URL
-	 * @param longUrl
-	 * 				The original long URL
-	 */
-	@JsonCreator
-	public URLShortenerResponse(
-			@JsonProperty("kind") String kind,
-			@JsonProperty("id") String id,
-			@JsonProperty("longUrl") String longUrl) {
-		this.kind = kind;
-		this.id = id;
-		this.longUrl = longUrl;
-	}
+    private final String kind;
+    private final String id;
+    private final String longUrl;
 
-	/**
-	 * @return the kind
-	 */
-	public String getKind() {
-		return this.kind;
-	}
+    /**
+     * @param kind
+     *         The type of response
+     * @param id
+     *         The short URL
+     * @param longUrl
+     *         The original long URL
+     */
+    @JsonCreator
+    public URLShortenerResponse(
+            @JsonProperty("kind") String kind,
+            @JsonProperty("id") String id,
+            @JsonProperty("longUrl") String longUrl) {
+        this.kind = kind;
+        this.id = id;
+        this.longUrl = longUrl;
+    }
 
-	/**
-	 * @return the id
-	 */
-	public String getId() {
-		return this.id;
-	}
+    /**
+     * @return the kind
+     */
+    public String getKind() {
+        return this.kind;
+    }
 
-	/**
-	 * @return the longUrl
-	 */
-	public String getLongUrl() {
-		return this.longUrl;
-	}
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     * @return the longUrl
+     */
+    public String getLongUrl() {
+        return this.longUrl;
+    }
 
 }

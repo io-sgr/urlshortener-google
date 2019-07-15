@@ -20,26 +20,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author SgrAlpha
- *
  */
 public class ShortenUrlPayload {
 
-	private final String longUrl;
+    private final String longUrl;
 
-	/**
-	 * @param longUrl
-	 * 				The long URL which need to be shortened
-	 */
-	public ShortenUrlPayload(String longUrl) {
-		this.longUrl = longUrl;
-	}
+    /**
+     * @param longUrl
+     *         The long URL which need to be shortened
+     */
+    public ShortenUrlPayload(String longUrl) {
+        this.longUrl = longUrl;
+    }
 
-	/**
-	 * @return the longUrl
-	 */
-	@JsonProperty("longUrl")
-	public String getLongUrl() {
-		return this.longUrl;
-	}
+    /**
+     * @return the longUrl
+     */
+    @JsonProperty("longUrl")
+    public String getLongUrl() {
+        return this.longUrl;
+    }
 
 }
